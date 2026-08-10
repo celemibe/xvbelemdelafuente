@@ -3,7 +3,7 @@
     --oscuro: #212121;
     --primario: #2b3b5d;
     --second: #f3774d;
-    --gris: #f0f0f0;
+    --gris: #F5EDDD;
       --oro1:#BF953F;
   --oro2:#FCF6BA;
   --oro3:#B38728;
@@ -152,20 +152,7 @@ body {
     padding-bottom: 3rem;
 }
 
-/*.banner-derecho2{
-    position: relative;
 
-    background-image: url("../img/baner-derecho2.png");
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 30% 100%;
-}
-
-/* Asegura que el contenido quede encima */
-/*.banner-derecho2 > *{
-    position: relative;
-    z-index: 1;
-}*/
 .fondo-footer {
     position: relative;
     width: 100%;
@@ -281,7 +268,7 @@ h3 {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .25);
     /* Ajusta intensidad */
     z-index: 2;
 }
@@ -475,7 +462,7 @@ h3 {
     font-family: "Corinthia", cursive;
     font-weight: 700;
     font-style: normal;
-    font-size: 4rem;
+    font-size: 5rem;
     text-align: center;
     margin: 0;
 
@@ -1028,7 +1015,7 @@ border-radius: 1rem;
   justify-content:flex-end;
   padding:2rem 1.5rem 3rem;
   text-align:center;
-
+border-radius:1rem;
   background-image:
     linear-gradient(to bottom,
       rgba(14,23,41,0) 35%,
