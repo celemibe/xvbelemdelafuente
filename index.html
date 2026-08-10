@@ -14,6 +14,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Corinthia:wght@400;700&family=Krub:wght@400;700&family=Mea+Culpa:wght@400&family=Poiret+One:wght@700&family=Tangerine:wght@700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="preload" href="css/animation.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="preload" href="css/styles.css" as="style">
@@ -47,53 +49,73 @@
 
     <main class="contenedor sombra">
         <!-- Doce secciones vacías solicitadas -->
-        <div class="desliza fondo-azul">
+        <div class="desliza fondo-degradado">
             <span class="desliza__texto">Desliza</span>
             <span class="desliza__flecha"></span>
         </div>
-        <div class="frase-inicial lugar__imagen animar slide-left fecha">
-            <img src="img/frase-inicial.png" alt="imagen frase">
-        </div>
+
+        <!--<div class="desliza fondo-azul texto-blanco">
+            <p>Que este día quede grabado como símbolo de esperanza y compromiso</p>
+        </div>-->
         <div class="secciones">
-
+            <div class="separacion-contenedor fondo-blanco">
+                <p></p>
+            </div>
             <section class="seccion " id="seccion-1">
-                <div class="padres animar shadow-drop-right marco-azul texto-azul fondo-blanco">
-                    <p>Con la bendición de Dios y de mis</p>
-                    <h3>Padres</h3>
-                    <h4>Profr. Manuel De la Fuente Estrada</h4>
-                    <h4>&</h4>
-                    <h4>Profra. Leidy Alejandro Hernández</h4>
-                </div>
+                <div class="contenedor-tarjetas">
 
-                <div class="fondo-imagen__padrinos padrinos texto-azul animar shadow-drop-right fondo-blanco">
-                    <p>Con la compañia de mis</p>
-                    <h3>Padrinos de velación</h3>
-                    <h4>Lic. José Alfredo Escayola Escalante</h4>
-                    <h4>&</h4>
-                    <h4>Lic. Yolanda Escalante López</h4>
-                </div>
-                <div class="padres animar shadow-drop-right marco-azul texto-azul fondo-blanco">
-                    <p>Con la compañia de mis</p>
-                    <h3>Padrinos de brindis</h3>
-                    <h4>Lic. Simón Zamora Cornelio</h4>
-                    <h4>&</h4>
-                    <h4>Arq. Nancy Alejandro Hernández</h4>
+                    <div class="tarjeta-familia tarjeta-familia--padres animar slide-left">
+                        <div class="tarjeta-familia__ornamento">&#10086;</div>
+                        <p>Con la bendición de Dios y de mis</p>
+                        <h3>Padres</h3>
+                        <span class="tarjeta-familia__linea"></span>
+                        <h4>Mtro. Manuel De la Fuente Estrada</h4>
+                        <h4 class="y">&amp;</h4>
+                        <h4>Mtra. Leidy Alejandro Hernández</h4>
+                    </div>
+
+                    <div class="tarjeta-familia tarjeta-familia--velacion animar slide-right">
+                        <div class="tarjeta-familia__ornamento">&#10022;</div>
+                        <h3>Padrinos de velación</h3>
+                        <span class="tarjeta-familia__linea"></span>
+                        <h4>Lic. José Alfredo Escayola Escalante</h4>
+                        <h4 class="y">&amp;</h4>
+                        <h4>Lic. Yolanda Escalante López</h4>
+                    </div>
+
+                    <div class="tarjeta-familia tarjeta-familia--brindis animar slide-left">
+                        <div class="tarjeta-familia__ornamento">&#9670;</div>
+                        <h3>Padrinos de brindis</h3>
+                        <span class="tarjeta-familia__linea"></span>
+                        <h4>Lic. Simón Zamora Cornelio</h4>
+                        <h4 class="y">&amp;</h4>
+                        <h4>Arq. Nancy Alejandro Hernández</h4>
+                    </div>
+
                 </div>
             </section>
+            <div class="separacion-contenedor fondo-blanco">
+                <p></p>
+            </div>
             <section class="seccion-fecha fondo-azul texto-blanco" id="seccion-1">
                 <div class="tarjeta-fecha animar slide-left ">
                     <h4 class="texto-dorado">19 · Septiembre · 2026</h4>
                 </div>
             </section>
+            <div class="separacion-contenedor fondo-blanco">
+                <p></p>
+            </div>
             <section class="seccion fondo-blanco texto-negro " id="seccion-2">
                 <div class="fecha fondo-azul texto-blanco">
+                    <span class="fecha__linea"></span>
                     <p>Crecer significa aprender, madurar y soñar más alto,
                         y me llena de alegría que seas parte de ello.</p>
-                </div>
-                <div class="separacion-contenedor fondo-blanco">
-                    <p></p>
+                    <span class="fecha__linea--abajo"></span>
                 </div>
             </section>
+            <div class="separacion-contenedor fondo-blanco">
+                <p></p>
+            </div>
             <section class="seccion fondo-azul texto-blanco" id="seccion-3">
                 <div class="lugar__imagen animar slide-right">
                     <picture>
@@ -119,11 +141,14 @@
                     </div>
                     <div class="aviso-cristal__ceremonia">
                         <div class="aviso-cristal__icono">&#9888;</div>
-                        <p>Te pedimos, con mucho cariño, ser puntual a la misa de acción de gracias.</p>
+                        <p class="titulos">Te pedimos, con mucho cariño, ser puntual a la misa de acción de gracias.</p>
                     </div>
 
                 </div>
             </section>
+            <div class="separacion-contenedor fondo-blanco">
+                <p></p>
+            </div>
             <section class="seccion fondo-blanco texto-azul" id="seccion-4">
                 <div class="lugar__imagen">
                     <picture>
@@ -131,7 +156,7 @@
                         <img src="img/salon.jpg" loading="lazy" decoding="async" alt="Imagen del salon">
                     </picture>
                 </div>
-                <div class="animar shadow-drop-right banner-ambos ">
+                <div class="animar shadow-drop-right ">
                     <div class="icono ">
                         <img src="img/comer.png" alt="icono comer">
                     </div>
@@ -150,29 +175,26 @@
                 </div>
 
             </section>
-            <section class="seccion fondo-azul texto-blanco" id="seccion-5">
-                <div class="fondo__imagen fondo-degradado animar slide-right">
-                    <picture>
-                        <source srcset="img/regalo.webp" type="image/webp">
-
-                        <img src="img/regalo.png" loading="lazy" decoding="async" alt="Imagen de regalo">
-                    </picture>
-                </div>
-                <div class="ceremonia animar shadow-drop-right banner-derecho2 ">
-                    <h3>Mesa de regalos</h3>
-                    <p>Muchas gracias por el cariño que me has dado hasta el día de hoy. Su compañia hace de este
-                        momento
-                        aún más especial para mí.
-                    </p>
-                    <p>Si no tienes tiempo o no sabes qué regalarme...</p>
+            <section class="seccion rsvp texto-blanco" id="seccion-5">
+                <div class="titulos animar">
+                    <!--<h3>Mesa de regalos</h3>-->
                     <h5 class="texto-dorado">¡Lluvia de sobres!</h5>
                     <div class="icono">
                         <img src="img/cheque-de-pago.png" alt="icono sobres">
                     </div>
+                    <div class="rsvp__tarjeta">
+                        <p>Muchas gracias por el cariño que me has dado hasta el día de hoy. Su compañia hace de este
+                            momento
+                            aún más especial para mí.
+                        </p>
+                    </div>
                 </div>
             </section>
+            <div class="separacion-contenedor fondo-blanco">
+                <p></p>
+            </div>
             <section class="seccion fondo-blanco texto-azul" id="seccion-6">
-                <div class="fondo__imagen fondo-degradado animar slide-right">
+                <div class="fondo__imagen animar slide-right">
                     <picture>
                         <source srcset="img/vestido.webp" type="image/webp">
                         <img src="img/vestido.JPG" loading="lazy" decoding="async" alt="Imagen del vestido">
@@ -183,13 +205,13 @@
                     <h4>Formal</h4>
 
                     <div class="vestimenta-panel">
-                        <div class="paleta-circulos">
+                        <!--<div class="paleta-circulos">
                             <span class="circulo" style="--color:#0d1b3d"></span>
                             <span class="circulo" style="--color:#1c2f5c"></span>
                             <span class="circulo reservado" style="--color:#2b3b5d"></span>
                             <span class="circulo" style="--color:#4a6ba0"></span>
                             <span class="circulo" style="--color:#8fa8d1"></span>
-                        </div>
+                        </div>-->
 
                         <div class="aviso-cristal">
                             <div class="aviso-cristal__icono">&#9888;</div>
@@ -201,6 +223,7 @@
                     <p></p>
                 </div>
             </section>
+            <!--
             <section class="seccion fondo-blanco" id="seccion-7">
                 <div class="lugar__imagen animar slide-right">
                     <picture>
@@ -223,7 +246,26 @@
                         <h4>XVBELEM</h4>
                     </div>
                 </div>
+            </section>-->
+            <section class="rsvp" id="seccion-8">
+                <p class="rsvp__etiqueta">Confirma tu asistencia</p>
+                <div class="rsvp__corazon">&#9825;</div>
+
+                <div class="rsvp__tarjeta">
+                    <p class="rsvp__texto">Será un honor contar con tu presencia. Por favor, ayúdanos confirmando tu
+                        asistencia
+                        antes del 24 de Agosto.
+                    </p>
+                    <span class="rsvp__divisor"></span>
+                    <a href="https://wa.me/529331366984" target="_blank" class="rsvp__boton">
+                        <img src="img/whatsapp.png" alt="" class="rsvp__boton-icono">
+                        Confirmar asistencia
+                    </a>
+                </div>
             </section>
+            <div class="separacion-contenedor fondo-blanco">
+                <p></p>
+            </div>
             <section class="seccion-reloj titulo-contador  fondo-blanco">
                 <div class="carrusel-rasgado" id="carrusel">
                     <div class="carrusel-rasgado__sello">Belem</div>
@@ -298,33 +340,8 @@
                 </div>
 
             </section>
-            <section class="seccion " id="seccion-8">
-                <div class="animar shadow-drop-right  fondo-footer">
-                    <div class="icono">
-                        <img src="img/whatsapp.png" alt="icono sobres">
-                    </div>
-                    <div class="ceremonia">
-                        <h3>Confirma tu asistencia</h3>
-                        <p>Al dar click en el botón escríbe tu nombre completo, mi familia y yo te indicaremos el número
-                            de
-                            lugares que hemos reservado para ti. </p>
 
-                        <div class="contenedor-boton">
-                            <a href="https://wa.me/529331366984" target="_blank" class="boton">Click aquí</a>
-                        </div>
 
-                        <p>Por favor, ayúdanos confirmando tu asistencia
-                            antes del 24 de Agosto.</p>
-                    </div>
-
-                    <div class="ceremonia">
-                        <h3>¡No faltes!</h3>
-                    </div>
-                    <div class="corona ">
-                        <img src="img/corona.png" alt="icono corona">
-                    </div>
-                </div>
-            </section>
         </div>
     </main>
     <footer class="footer">

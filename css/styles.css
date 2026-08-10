@@ -77,16 +77,19 @@ body {
 }
 
 .fondo-azul {
-    background-color: var(--primario);
+        background:
+        radial-gradient(circle at 20% 15%, rgba(191,149,63,.20) 0%, transparent 7%),
+        radial-gradient(circle at 82% 20%, rgba(252,246,186,.15) 0%, transparent 6%),
+        radial-gradient(circle at 65% 80%, rgba(191,149,63,.18) 0%, transparent 7%),
+        radial-gradient(circle at 20% 85%, rgba(179,135,40,.18) 0%, transparent 6%),
+        linear-gradient(160deg, #1a2740 0%, #101c33 55%, #0a1424 100%);
     width: 100%;
 }
 
 .fondo-degradado {
-    background: radial-gradient(circle at center,
-            #b3e0dc 0%,
-            #4fb9af 40%,
-            #048c7f 75%,
-            #025043 100%);
+    background:
+    linear-gradient(160deg, #1a2740 0%, #101c33 55%, #0a1424 100%);
+    width: 100%;
 }
 
 .texto-negro {
@@ -370,11 +373,10 @@ h3 {
 }
 
 .seccion p {
-    font-family: "Cinzel", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 1.5rem;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 1.55rem;
+    line-height: 1.35;
+    margin: 0;
     text-align: center;
 }
 
@@ -413,6 +415,14 @@ h3 {
     padding: 5rem 1rem;
 
 }
+.padres p {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    text-align: center;
+}
 
 .padrinos {
     display: flex;
@@ -421,6 +431,14 @@ h3 {
     gap: .5rem;
     padding: 5rem 1rem;
 }
+.padrinos p {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    text-align: center;
+}   
 
 .ceremonia {
     padding: 1rem;
@@ -444,16 +462,30 @@ h3 {
     margin: 0;
 
 }
+.ceremonia p {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.titulos h5 {
+    font-family: "Corinthia", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+
+}
 
 .texto-dorado {
-    background: linear-gradient(45deg,
-            #BF953F,
-            #FCF6BA,
-            #B38728);
-    background-clip: text;
+    background: linear-gradient(180deg, var(--oro2) 0%, var(--oro1) 55%, var(--oro3) 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .hashtag {
@@ -481,26 +513,59 @@ h3 {
 
 }
 
-.fecha p {
-    font-family: "Tangerine", cursive;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 4rem;
-    text-align: center;
-    margin: 0;
-    padding: 1.5rem 0;
+/* ===== Sección frase ===== */
+.fecha{
+  position:relative;
+  overflow:hidden;
+  padding:3.5rem 2rem;
+  text-align:center;
+border-radius:1rem;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(191,149,63,.18) 0%, transparent 7%),
+    radial-gradient(circle at 85% 15%, rgba(252,246,186,.14) 0%, transparent 6%),
+    radial-gradient(circle at 70% 80%, rgba(191,149,63,.16) 0%, transparent 7%),
+    radial-gradient(circle at 25% 85%, rgba(179,135,40,.16) 0%, transparent 6%),
+    linear-gradient(160deg, #1c2b4a 0%, #14203a 55%, #0d1626 100%);
 }
 
-
-
-.seccion-degradado-azul {
-
-    min-height: 60vh;
-    padding: 0 0;
-    color: #ffffff;
-    background: linear-gradient(to bottom, #A2D2FF 0%, #00B4D8 33%, #0077B6 66%, #03045E 100%);
-    margin: 0;
+/* comilla ornamental */
+.fecha::before{
+  content:"\201C";
+  display:block;
+  font-family:'Cinzel', serif;
+  font-size:3.5rem;
+  line-height:1;
+  color:var(--oro1);
+  opacity:.55;
+  margin-bottom:-1rem;
 }
+
+.fecha__linea{
+  width:2.4rem;
+  height:2px;
+  margin:0 auto 1.6rem;
+  border-radius:2px;
+  background:linear-gradient(90deg, transparent, var(--oro1), transparent);
+}
+
+.fecha p{
+  margin:0;
+  font-family:'Tangerine', cursive;
+  font-weight:700;
+  font-size:3.2rem;
+  line-height:1.25;
+  color:var(--blanco);
+  text-shadow:0 2px 10px rgba(0,0,0,.4);
+}
+
+.fecha__linea--abajo{
+  width:2.4rem;
+  height:2px;
+  margin:1.8rem auto 0;
+  border-radius:2px;
+  background:linear-gradient(90deg, transparent, var(--oro1), transparent);
+}
+
 
 
 .marco-azul {
@@ -521,12 +586,14 @@ h3 {
 
 .fondo__imagen {
     text-align: center;
+    
 }
 
 .fondo__imagen img {
     width: 100%;
     display: block;
     /* elimina el espacio inferior por línea base */
+    border-radius: 1rem 1rem 0 0;
 }
 
 .regalos__imagen img {
@@ -820,7 +887,7 @@ h3 {
 /*Reloj*/
 .seccion-reloj {
     position: relative;
-
+border-radius: 1rem;
     width: 100%;
     min-height: 75vh;
 
@@ -1164,4 +1231,212 @@ h3 {
     object-fit: contain;              /* muestra la foto completa, sin recortar */
     background: #0d1729;              /* rellena el espacio sobrante con el mismo tono oscuro del degradado, para que no se vean franjas blancas */
   }
+}
+
+.rsvp{
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 1.6rem 3.5rem;
+    border-radius: 1.8rem;
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 20% 15%, rgba(191,149,63,.20) 0%, transparent 7%),
+        radial-gradient(circle at 82% 20%, rgba(252,246,186,.15) 0%, transparent 6%),
+        radial-gradient(circle at 65% 80%, rgba(191,149,63,.18) 0%, transparent 7%),
+        radial-gradient(circle at 20% 85%, rgba(179,135,40,.18) 0%, transparent 6%),
+        linear-gradient(160deg, #1a2740 0%, #101c33 55%, #0a1424 100%);
+}
+
+.rsvp__etiqueta{
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: .4rem;
+    text-transform: uppercase;
+    color: var(--oro2);
+    opacity: .85;
+}
+
+.rsvp__titulo{
+    margin: .4rem 0 .8rem;
+    font-family: 'Corinthia', cursive;
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 1;
+    background: linear-gradient(180deg, var(--oro2) 0%, var(--oro1) 55%, var(--oro3) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rsvp__corazon{
+    font-size: 1.3rem;
+    color: var(--oro1);
+    text-shadow: 0 0 10px rgba(191,149,63,.6);
+    margin-bottom: 2.2rem;
+}
+
+.rsvp__tarjeta{
+    padding: 2.2rem 1.6rem 2rem;
+    border-radius: 1.4rem;
+    background: rgba(255,255,255,.06);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(191,149,63,.35);
+    box-shadow: 0 10px 26px rgba(0,0,0,.35);
+}
+
+.rsvp__texto{
+    margin: 0 0 1.6rem;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 1.55rem;
+    line-height: 1.35;
+    text-align: center;
+    line-height: 1.6;
+    color: rgba(255,255,255,.9);
+}
+
+.rsvp__divisor{
+    display: block;
+    width: 2.4rem;
+    height: 2px;
+    margin: 0 auto 1.8rem;
+    border-radius: 2px;
+}
+
+.rsvp__boton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 3rem;
+    text-decoration: none;
+    cursor: pointer;
+font-family: 'Poiret One', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #1c1c1c;
+
+    background: linear-gradient(135deg, var(--oro2) 0%, var(--oro1) 60%, var(--oro3) 100%);
+    box-shadow: 0 8px 20px rgba(191,149,63,.4);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.rsvp__boton:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(191,149,63,.5);
+}
+
+.rsvp__boton-icono{
+    width: 1.4rem;
+    height: 1.4rem;
+    display: block;
+}
+.contenedor-tarjetas {
+    width: 100%;
+    max-width: none;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 1.4rem;
+
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+
+    .contenedor-tarjetas {
+        width: 100%;
+        max-width: none;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 1.4rem;
+    }
+
+    .tarjeta-familia {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* ===== Tarjeta base, compartida por las tres ===== */
+.tarjeta-familia{
+  position:relative;
+  overflow:hidden;
+  padding:2.6rem 1.8rem 2.2rem;
+  border-radius:1.4rem;
+  text-align:center;
+
+  background: linear-gradient(160deg, #1c2b4a 0%, #14203a 60%, #0d1626 100%);
+  border:1px solid rgba(191,149,63,.4);
+  box-shadow:0 10px 24px rgba(0,0,0,.3);
+}
+
+.tarjeta-familia__ornamento{
+  font-size:1.3rem;
+  margin-bottom:.6rem;
+  color:var(--acento, var(--oro1));
+  text-shadow:0 0 10px rgba(191,149,63,.4);
+}
+
+.tarjeta-familia p{
+  margin:0 0 .3rem;
+  font-family:'Cinzel', serif;
+  font-weight:600;
+  font-size: 1.1rem;
+  letter-spacing:.15rem;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.65);
+}
+
+.tarjeta-familia h3{
+  margin:0 0 1.4rem;
+  font-family:'Corinthia', cursive;
+  font-weight:700;
+  font-size:4rem;
+  line-height:1;
+  color:var(--acento, var(--oro1));
+}
+
+.tarjeta-familia__linea{
+  display:block;
+  width:2.2rem;
+  height:1px;
+  margin:0 auto 1.2rem;
+  background:linear-gradient(90deg, transparent, var(--acento, var(--oro1)), transparent);
+}
+
+.tarjeta-familia h4{
+  margin:0;
+  font-family:'Cinzel', serif;
+  font-weight:700;
+  font-size:2rem;
+  letter-spacing:.03rem;
+  color:var(--blanco);
+  line-height:1.5;
+}
+
+.tarjeta-familia h4.y{
+  margin:.3rem 0;
+  font-family:'Corinthia', cursive;
+  font-size:1.6rem;
+  color:var(--acento, var(--oro1));
+  opacity:.85;
+}
+
+/* ===== Variantes: cada rol con su propio acento y ornamento ===== */
+.tarjeta-familia--padres{
+  --acento:#BF953F; /* dorado clásico */
+}
+.tarjeta-familia--velacion{
+  --acento:#c9a66b; /* rosa dorado */
+}
+.tarjeta-familia--brindis{
+  --acento:#d9c08b; /* champagne */
 }
