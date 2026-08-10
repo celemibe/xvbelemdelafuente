@@ -66,6 +66,91 @@ body {
     box-shadow: 0 10px 20px rgba(243, 119, 77, .5);
 }
 
+/* ===== Botón Ceremonia (dorado) ===== */
+.boton-ceremonia {
+    position: relative;
+    background: radial-gradient(circle at center, var(--oro2) 0%, var(--oro1) 55%, var(--oro3) 100%);
+    color: #1c1c1c;
+    padding: 1rem 3rem;
+    margin: 1rem auto 0;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: normal;
+    border-radius: 2rem;
+    width: auto;
+    text-align: center;
+    border: none;
+    display: inline-block;
+    box-shadow: 0 6px 16px rgba(191, 149, 63, .4);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.boton-ceremonia::before{
+    content: "";
+    position: absolute;
+    inset: -6px;
+    z-index: -1;
+    border-radius: inherit;
+    background: radial-gradient(circle at center, rgba(252,246,186,.55) 0%, transparent 70%);
+    filter: blur(10px);
+    animation: resplandor-dorado 2.4s ease-in-out infinite;
+}
+
+.boton-ceremonia:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(191, 149, 63, .5);
+}
+
+@keyframes resplandor-dorado{
+    0%, 100%{ opacity:.5; transform:scale(1); }
+    50%{ opacity:1; transform:scale(1.08); }
+}
+
+
+/* ===== Botón Recepción (azul) ===== */
+.boton-recepcion {
+    position: relative;
+    background: radial-gradient(circle at center, #5b7abc 0%, var(--primario) 55%, #182033 100%);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin: 1rem auto 0;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: normal;
+    border-radius: 2rem;
+    width: auto;
+    text-align: center;
+    border: none;
+    display: inline-block;
+    box-shadow: 0 6px 16px rgba(43, 59, 93, .5);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.boton-recepcion::before{
+    content: "";
+    position: absolute;
+    inset: -6px;
+    z-index: -1;
+    border-radius: inherit;
+    background: radial-gradient(circle at center, rgba(91,122,188,.5) 0%, transparent 70%);
+    filter: blur(10px);
+    animation: resplandor-azul 2.4s ease-in-out infinite;
+}
+
+.boton-recepcion:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(43, 59, 93, .6);
+}
+
+@keyframes resplandor-azul{
+    0%, 100%{ opacity:.5; transform:scale(1); }
+    50%{ opacity:1; transform:scale(1.08); }
+}
+
 .contenedor-boton {
     text-align: center;
     padding: 1.5rem;
